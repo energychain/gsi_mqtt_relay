@@ -1,4 +1,7 @@
-const mqtt = require('mqtt')
+#!/usr/bin/env node
+'use strict';
+
+const mqtt = require('mqtt');
 const program = require('commander');
 const http_request = require('request');
 
