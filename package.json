@@ -1,6 +1,6 @@
 {
 	"name": "gsi_mqtt_relay",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "MQTT publisher relay for Corrently GrünstromIndex",
 	"keywords": [
 		"gsi",
@@ -9,7 +9,7 @@
 		"iot",
 		"stromdao"
 	],
-	"homepage": "https://github.com/energychain/gsi_mqtt_relay#readme",
+	"homepage": "https://www.corrently.de/hintergrund/gruenstromindex/index.html",
 	"bugs": {
 		"url": "https://github.com/energychain/gsi_mqtt_relay/issues"
 	},
