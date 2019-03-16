@@ -18,10 +18,10 @@ gsi-mqtt -h <mqtt-url> [-p ZIPCODE] [-d] [-q]
 You will receive messages for topics:
 | Topic | Message |
 |---|---|
-|gsi_json_ZIPCODE|JSON Object|
-|gsi_ZIPCODE|Integer|
-|gsi|Integer|
-|gsi_all|JSON Object|
+| gsi_json_ZIPCODE | JSON Object |
+| gsi_ZIPCODE | Integer |
+| gsi | Integer |
+| gsi_all | JSON Object |
 
 ## Referenzen
 - https://www.corrently.de/hintergrund/gruenstromindex/index.html
