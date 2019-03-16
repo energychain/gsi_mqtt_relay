@@ -16,7 +16,8 @@ gsi-mqtt -h <mqtt-url> [-p ZIPCODE] [-d] [-q]
 ```
 
 You will receive messages for topics:
-|-|-|
+| Topic | Message |
+|---|---|
 |gsi_json_ZIPCODE|JSON Object|
 |gsi_ZIPCODE|Integer|
 |gsi|Integer|
