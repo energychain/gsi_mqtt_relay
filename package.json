@@ -1,6 +1,6 @@
 {
 	"name": "gsi_mqtt_relay",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "MQTT publisher relay for Corrently GrünstromIndex",
 	"keywords": [
 		"gsi",

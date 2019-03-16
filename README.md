@@ -12,7 +12,7 @@ npm -g -i gsi_mqtt_relay
 
 ## Usage
 ```
-gsi-mqtt -h <mqtt-url> [-p ZIPCODE] [-d] [-q]
+gsi-mqtt-relay -h <mqtt-url> [-p ZIPCODE] [-d] [-q]
 ```
 
 You will receive messages for topics:
@@ -24,5 +24,15 @@ You will receive messages for topics:
 | gsi | Integer |
 | gsi_all | JSON Object |
 
+## Options
+
+'-d' Daemonize (Sends message every hour)
+
+'-q' Quiet Mode
+
 ## Referenzen
 - https://www.corrently.de/hintergrund/gruenstromindex/index.html
+
+## Support
+- https://github.com/energychain/gsi_mqtt_relay/issues
+- https://stromdao.com/kontakt/
