@@ -1,0 +1,34 @@
+{
+	"name": "gsi_mqtt_relay",
+	"version": "1.0.0",
+	"description": "MQTT publisher relay for Corrently GrünstromIndex",
+	"keywords": [
+		"gsi",
+		"corrently",
+		"mqtt",
+		"iot",
+		"stromdao"
+	],
+	"homepage": "https://github.com/energychain/gsi_mqtt_relay#readme",
+	"bugs": {
+		"url": "https://github.com/energychain/gsi_mqtt_relay/issues"
+	},
+	"license": "Apache-2.0",
+	"author": "Corrently Corp <kontakt@stromdao.de>",
+	"main": "index.js",
+	"bin": {
+		"gsi-mqtt-relay": "./index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/energychain/gsi_mqtt_relay.git"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"commander": "^2.19.0",
+		"mqtt": "^2.18.8",
+		"request": "^2.88.0"
+	}
+}
