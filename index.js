@@ -48,11 +48,8 @@ client.on('connect', function () {
         client.subscribe('gsi_all', function (err) {
           if (!err) {
             publishGSI();
-            if(program.daemonize) {
-              setInterval(function() {
-                publishGSI();
-              },900000);
-            }
+          } else {
+            console.log(err);
           }
         });
       });
@@ -64,4 +61,10 @@ client.on('message', function (topic, message) {
   // message is Buffer
   //console.log(topic,message.toString())
   client.end()
-})
+});
+
+if(program.daemonize) {
+  setInterval(function() {
+    publishGSI();
+  },900000);
+}
