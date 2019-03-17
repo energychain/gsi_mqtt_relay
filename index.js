@@ -63,7 +63,10 @@ client.on('connect', function () {
 client.on('message', function (topic, message) {
   // message is Buffer
   //console.log(topic,message.toString())
-  client.end()
+  if(topic == 'gsi_'+program.plz) {
+    console.log(message);
+  }
+  //client.end()
 });
 
 if(program.daemonize) {
