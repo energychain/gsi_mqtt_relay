@@ -51,7 +51,7 @@ client.on('connect', function () {
             if(program.daemonize) {
               setInterval(function() {
                 publishGSI();
-              },3600000);
+              },900000);
             }
           }
         });
