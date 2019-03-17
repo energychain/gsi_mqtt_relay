@@ -43,8 +43,11 @@ const publishGSI = function() {
 
 client.on('connect', function () {
   client.subscribe('gsi', function (err) {
+    if(err) console.log(err);
     client.subscribe('gsi_json_'+program.plz, function (err) {
+      if(err) console.log(err);
       client.subscribe('gsi_'+program.plz, function (err) {
+       if(err) console.log(err);
         client.subscribe('gsi_all', function (err) {
           if (!err) {
             publishGSI();
