@@ -64,7 +64,7 @@ client.on('message', function (topic, message) {
   // message is Buffer
   //console.log(topic,message.toString())
   if(topic == 'gsi_'+program.plz) {
-    console.log(message);
+    console.log(message.toString());
   }
   //client.end()
 });
