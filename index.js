@@ -33,10 +33,10 @@ const publishGSI = function() {
         if(b.history[i].epochtime < now) selected = b.history[i];
       }
       if(selected != null) {
-        client.publish('gsi_json_'+program.plz, JSON.stringify(selected));
-        client.publish('gsi_'+program.plz, ""+selected.eevalue);
-        client.publish('gsi', ""+selected.eevalue);
-        client.publish('gsi_all', JSON.stringify({location:b.location,values:b.hitory}));
+        client.publish('gsi_json_'+program.plz, JSON.stringify(selected),{retain:true});
+        client.publish('gsi_'+program.plz, ""+selected.eevalue,{retain:true});
+        client.publish('gsi', ""+selected.eevalue,{retain:true});
+        client.publish('gsi_all', JSON.stringify({location:b.location,values:b.hitory}),{retain:true});
       }
     })
 }
