@@ -6,10 +6,12 @@ const program = require('commander');
 const http_request = require('request');
 
 program
-  .version('1.0.0')
+  .version('1.0.11')
   .option('-h, --host <host>', 'MQTT Server URL (defaults to mqtt://localhost)')
   .option('-p, --plz <plz>', 'Zipcode in Germany (Postleitzahl) (defaults to 69256')
   .option('-d, --daemonize', 'Daemonize process and publish new value every hour')
+  .option('-u, --username <username>', 'Username for MQTT Server/Broker')
+  .option('-P, --password <password>', 'Password for MQTT Server/Broker')
   .option('-q, --quite', 'No console output')
   .parse(process.argv);
 
@@ -17,8 +19,11 @@ program
 if(!program.host) program.host = 'mqtt://localhost';
 if(!program.plz) program.plz = '69256';
 if(!program.daemonize) program.daemonize=false;
+let options={};
+if(program.username) options.username=program.username;
+if(program.password) options.password=program.password;
 
-const client  = mqtt.connect(program.host);
+const client  = mqtt.connect(program.host,options);
 if(!program.quite) {
   console.log("Host",program.host);
   console.log("ZIP",program.plz);
